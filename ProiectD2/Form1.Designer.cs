@@ -676,6 +676,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "ProiectD2";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HillClimbingChart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownRename)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownReorder)).EndInit();
