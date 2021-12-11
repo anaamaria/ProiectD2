@@ -1,0 +1,13 @@
+<psatsim>
+    <config name="Default">
+        <general superscalar="4" rename="16" reorder="20" rsb_architecture="distributed" separate_dispatch="false" seed="0" trace="compress.tra" output="output_0a39fdb7-884a-45c4-ae4f-e520333891eb.xml" vdd="2.2" frequency="600" speculative="true" speculation_accuracy="0.980" />
+        <execution architecture="standard" integer="5" floating="7" branch="4" memory="5" />
+        <memory architecture="l2">
+            <system latency="20" />
+            <l1_code hitrate="0.990" latency="1" />
+            <l1_data hitrate="0.970" latency="1" />
+            <l2 hitrate="0.990" latency="3" />
+        </memory>
+    </config>
+</psatsim>
+
