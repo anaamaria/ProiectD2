@@ -68,17 +68,17 @@ namespace ProiectD2
             }
 
 
-           
+
 
             do
             {
                 currentPoint = keyList[rand.Next(keyList.Count)];
-                if (ipc.Count==0)
+                if (ipc.Count == 0)
                 {
                     double ipcFirst = help.eval(currentPoint, Vc);
                     ipc.Add(ipcFirst);
                 }
-                
+
                 switch (currentPoint)
                 {
                     case "superscalar":

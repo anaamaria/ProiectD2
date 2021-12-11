@@ -61,7 +61,8 @@ namespace ProiectD2
                 keyList.Add(keys);
             }
 
-            do {
+            do
+            {
 
                 currentPoint = keyList[rand.Next(keyList.Count)];
 
@@ -71,13 +72,13 @@ namespace ProiectD2
                     ipc.Add(ipcFirst);
                 }
                 do
-            {
-                    
-                    switch (currentPoint)
                 {
-                    case "superscalar":
-                        int ValueVc_superscalar = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalSuperscalar, ValueVc_superscalar);
+
+                    switch (currentPoint)
+                    {
+                        case "superscalar":
+                            int ValueVc_superscalar = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalSuperscalar, ValueVc_superscalar);
                             if (vecini.Count == 1)
                             {
                                 Vn[currentPoint] = Convert.ToString(vecini[0]);
@@ -100,9 +101,9 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "rename":
-                        int ValueVc_rename = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalRename, ValueVc_rename);
+                        case "rename":
+                            int ValueVc_rename = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalRename, ValueVc_rename);
                             if (vecini.Count == 1)
                             {
                                 Vn[currentPoint] = Convert.ToString(vecini[0]);
@@ -125,9 +126,9 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "reorder":
-                        int ValueVc_reorder = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalReorder, ValueVc_reorder);
+                        case "reorder":
+                            int ValueVc_reorder = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalReorder, ValueVc_reorder);
                             if (vecini.Count == 1)
                             {
                                 Vn[currentPoint] = Convert.ToString(vecini[0]);
@@ -150,7 +151,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "rsb_architecture":
+                        case "rsb_architecture":
                             string ValueVc_rsb_architecture = Vc[currentPoint];
 
                             veciniString = help.NeighborsString(intervalRsb_architecture, ValueVc_rsb_architecture);
@@ -177,24 +178,24 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "separate_dispatch":
-                        bool ValueVc_separate_dispatch = Convert.ToBoolean(Vc[currentPoint]);
+                        case "separate_dispatch":
+                            bool ValueVc_separate_dispatch = Convert.ToBoolean(Vc[currentPoint]);
 
-                        if (ValueVc_separate_dispatch == true)
-                        {
-                            vecinBool = false;
-                        }
-                        else
-                        {
-                            vecinBool = true;
-                        }
+                            if (ValueVc_separate_dispatch == true)
+                            {
+                                vecinBool = false;
+                            }
+                            else
+                            {
+                                vecinBool = true;
+                            }
 
-                        Vn[currentPoint] = Convert.ToString(vecinBool);
+                            Vn[currentPoint] = Convert.ToString(vecinBool);
 
-                        break;
-                    case "integer":
-                        int ValueVc_integer = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalExecution, ValueVc_integer);
+                            break;
+                        case "integer":
+                            int ValueVc_integer = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalExecution, ValueVc_integer);
 
                             if (vecini.Count == 1)
                             {
@@ -218,9 +219,9 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "floating":
-                        int ValueVc_floating = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalExecution, ValueVc_floating);
+                        case "floating":
+                            int ValueVc_floating = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalExecution, ValueVc_floating);
 
                             if (vecini.Count == 1)
                             {
@@ -244,9 +245,9 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "branch":
-                        int ValueVc_branch = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalExecution, ValueVc_branch);
+                        case "branch":
+                            int ValueVc_branch = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalExecution, ValueVc_branch);
 
                             if (vecini.Count == 1)
                             {
@@ -270,9 +271,9 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    case "memory":
-                        int ValueVc_memory = Convert.ToInt32(Vc[currentPoint]);
-                        vecini = help.Neighbors(intervalExecution, ValueVc_memory);
+                        case "memory":
+                            int ValueVc_memory = Convert.ToInt32(Vc[currentPoint]);
+                            vecini = help.Neighbors(intervalExecution, ValueVc_memory);
 
                             if (vecini.Count == 1)
                             {
@@ -296,35 +297,35 @@ namespace ProiectD2
                                 }
                             }
                             break;
-                    default:
-                        break;
-                }
-                double ipcVc = help.eval(currentPoint, Vc);
-                double IpcVn = help.eval(currentPoint, Vn);
-                if (ipcVc < IpcVn)
-                {
+                        default:
+                            break;
+                    }
+                    double ipcVc = help.eval(currentPoint, Vc);
+                    double IpcVn = help.eval(currentPoint, Vn);
+                    if (ipcVc < IpcVn)
+                    {
                         Vc[currentPoint] = Vn[currentPoint];
                         ipc.Add(IpcVn);
-                        
-                    
-                }
-                else if (Randomm < help.AnnealingProbability(ipcVc, IpcVn, Tmax))
-                {
 
-                    Vc[currentPoint] = Vn[currentPoint];
-                   
 
-                 }
-                iteratiiKt++;
-            } while (iteratiiKt != MAX);
+                    }
+                    else if (Randomm < help.AnnealingProbability(ipcVc, IpcVn, Tmax))
+                    {
+
+                        Vc[currentPoint] = Vn[currentPoint];
+
+
+                    }
+                    iteratiiKt++;
+                } while (iteratiiKt != MAX);
 
 
                 iteratiiKt = 0;
-               Tmax = help.CoolingRatio(Tmax);
-                
+                Tmax = help.CoolingRatio(Tmax);
 
-            } while(Tmax >= Tmin);
-  
+
+            } while (Tmax >= Tmin);
+
             return Vc;
 
         }

@@ -6,12 +6,12 @@ namespace ProiectD2
     public class HillClimbing
     {
         List<double> ipc = new List<double>();
-        public Dictionary<string,string> HillClimbingAlgo(int MAX)
+        public Dictionary<string, string> HillClimbingAlgo(int MAX)
         {
             ipc.Clear();
             Dictionary<string, string> Vc = new Dictionary<string, string>();
             Dictionary<string, string> Vn = new Dictionary<string, string>();
-            
+
             HelpingMethods help = new HelpingMethods();
 
             bool local;
@@ -34,13 +34,13 @@ namespace ProiectD2
             int[] intervalReorder = new int[10];
             intervalReorder = help.Generate_Interval(512);
 
-            string[] intervalRsb_architecture = {"distributed", "centralized", "hybrid" };
+            string[] intervalRsb_architecture = { "distributed", "centralized", "hybrid" };
 
             bool[] intervalSeparate_dispatch = { true, false };
 
             int[] intervalExecution = new int[8];
             intervalExecution = help.Generate_Interval(8);
-            
+
             int iteratii = 0;
 
             Vc = help.ReadDefaultConfig();
@@ -59,19 +59,19 @@ namespace ProiectD2
             {
                 keyList.Add(keys);
             }
-      
+
             do
             {
                 local = false;
-                
+
                 currentPoint = keyList[rand.Next(keyList.Count)];
-                               
+
                 if (ipc.Count == 0)
                 {
                     double ipcFirst = help.eval(currentPoint, Vc);
                     ipc.Add(ipcFirst);
                 }
-                               
+
                 do
                 {
                     switch (currentPoint)
@@ -79,7 +79,7 @@ namespace ProiectD2
                         case "superscalar":
                             int ValueVc_superscalar = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalSuperscalar, ValueVc_superscalar);
-                            if(vecini.Count == 1)
+                            if (vecini.Count == 1)
                             {
                                 Vn[currentPoint] = Convert.ToString(vecini[0]);
                             }
@@ -321,11 +321,11 @@ namespace ProiectD2
                 {
                     best[currentPoint] = Vc[currentPoint];
                     ipc.Add(IpcVc);
-             
+
                 }
             } while (iteratii != MAX);
 
-           return best;
+            return best;
         }
 
 

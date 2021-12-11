@@ -5,5 +5,10 @@
 
 
 #### Pentru rulare:
-* Dezarhivati PSATSim.zip in  `\bin\Debug`
 * Rebuild solutie 
+* Dezarhivati PSATSim.zip in  `\bin\Debug`
+
+![image](https://user-images.githubusercontent.com/67948869/145671429-f9d796fb-19fd-4efa-9308-4be2f4c02a1a.png)
+
+* Install PSATSimInstall.exe
+* Run the app
