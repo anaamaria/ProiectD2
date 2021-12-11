@@ -57,7 +57,7 @@ namespace ProiectD2
             return ipc;
         }
 
-        public void WriteInitialXML(Dictionary<string,string> Configuration)
+        public void WriteInitialXML(Dictionary<string, string> Configuration)
         {
             XmlDocument doc = new XmlDocument();
             string Path = Directory.GetCurrentDirectory() + @"\PSATSim\default_cfg.xml";
@@ -240,7 +240,7 @@ namespace ProiectD2
 
         public double eval(string currentKey, Dictionary<string, string> Configuratie)
         {
-            
+
             UpdateXML(currentKey, Configuratie);
 
             RunPSATSim();
@@ -248,9 +248,9 @@ namespace ProiectD2
             return ReadOutput();
         }
 
-      
 
-        public void ShowBestConfiguration (ListBox listBox, Dictionary<string,string> Configuration)
+
+        public void ShowBestConfiguration(ListBox listBox, Dictionary<string, string> Configuration)
         {
             listBox.Items.Clear();
             foreach (string keys in Configuration.Keys)
@@ -278,7 +278,7 @@ namespace ProiectD2
         public double CalculateProbability(double ipc1, double ipc2, int T)
         {
             double probability;
-            double calc = (ipc1-ipc2)/T;
+            double calc = (ipc1 - ipc2) / T;
 
             probability = 1 / (1 + Math.Pow(Math.E, calc));
 
@@ -288,11 +288,11 @@ namespace ProiectD2
 
         public double AnnealingProbability(double evalVc, double evalVn, double T)
         {
-            
+
             double probability;
             double calc = (evalVn - evalVc) / T;
             probability = Math.Pow(Math.E, calc);
-            
+
             return probability;
         }
 
@@ -300,7 +300,7 @@ namespace ProiectD2
         {
             double r = 0.1;
 
-            double coolingratio = Tmax * 1/Math.Pow(Math.E,j*r);
+            double coolingratio = Tmax * 1 / Math.Pow(Math.E, j * r);
             j++;
             return coolingratio;
         }
