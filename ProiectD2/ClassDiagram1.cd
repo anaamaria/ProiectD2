@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ProiectD2.Form1">
-    <Position X="9.75" Y="0.75" Width="1.5" />
+    <Position X="9.75" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -18,7 +18,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="ProiectD2.HillClimbing">
-    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAIAAgAAAAAAA=</HashCode>
       <FileName>HillClimbing.cs</FileName>
