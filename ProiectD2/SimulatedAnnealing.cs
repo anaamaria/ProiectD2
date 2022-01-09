@@ -5,8 +5,8 @@ namespace ProiectD2
 {
     public class SimulatedAnnealing
     {
+        private List<double> ipc = new List<double>();
 
-        List<double> ipc = new List<double>();
         public Dictionary<string, string> SimulatedAnnealingAlgo(int MAX, double Tmax, double Tmin)
         {
             Dictionary<string, string> Vc = new Dictionary<string, string>();
@@ -60,7 +60,6 @@ namespace ProiectD2
 
             do
             {
-
                 currentPoint = keyList[rand.Next(keyList.Count)];
 
                 if (ipc.Count == 0)
@@ -70,7 +69,6 @@ namespace ProiectD2
                 }
                 do
                 {
-
                     switch (currentPoint)
                     {
                         case "superscalar":
@@ -98,6 +96,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "rename":
                             int ValueVc_rename = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalRename, ValueVc_rename);
@@ -123,6 +122,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "reorder":
                             int ValueVc_reorder = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalReorder, ValueVc_reorder);
@@ -148,6 +148,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "rsb_architecture":
                             string ValueVc_rsb_architecture = Vc[currentPoint];
 
@@ -175,6 +176,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "separate_dispatch":
                             bool ValueVc_separate_dispatch = Convert.ToBoolean(Vc[currentPoint]);
 
@@ -190,6 +192,7 @@ namespace ProiectD2
                             Vn[currentPoint] = Convert.ToString(vecinBool);
 
                             break;
+
                         case "integer":
                             int ValueVc_integer = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalExecution, ValueVc_integer);
@@ -216,6 +219,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "floating":
                             int ValueVc_floating = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalExecution, ValueVc_floating);
@@ -242,6 +246,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "branch":
                             int ValueVc_branch = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalExecution, ValueVc_branch);
@@ -268,6 +273,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         case "memory":
                             int ValueVc_memory = Convert.ToInt32(Vc[currentPoint]);
                             vecini = help.Neighbors(intervalExecution, ValueVc_memory);
@@ -294,6 +300,7 @@ namespace ProiectD2
                                 }
                             }
                             break;
+
                         default:
                             break;
                     }
@@ -303,34 +310,24 @@ namespace ProiectD2
                     {
                         Vc[currentPoint] = Vn[currentPoint];
                         ipc.Add(IpcVn);
-
-
                     }
                     else if (Randomm < help.AnnealingProbability(ipcVc, IpcVn, Tmax))
                     {
-
                         Vc[currentPoint] = Vn[currentPoint];
-
-
                     }
                     iteratiiKt++;
                 } while (iteratiiKt != MAX);
 
-
                 iteratiiKt = 0;
                 Tmax = help.CoolingRatio(Tmax);
-
-
             } while (Tmax >= Tmin);
 
             return Vc;
-
         }
 
         public List<double> GetIPC()
         {
             return ipc;
         }
-
     }
 }

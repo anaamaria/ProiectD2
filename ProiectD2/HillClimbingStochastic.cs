@@ -5,8 +5,8 @@ namespace ProiectD2
 {
     public class HillClimbingStochastic
     {
+        private List<double> ipc = new List<double>();
 
-        List<double> ipc = new List<double>();
         public Dictionary<string, string> HillClimbingStochasticAlgo(int MAX, int T)
         {
             ipc.Clear();
@@ -14,7 +14,6 @@ namespace ProiectD2
             Dictionary<string, string> Vn = new Dictionary<string, string>();
 
             HelpingMethods help = new HelpingMethods();
-
 
             List<string> keyList = new List<string>(Vc.Keys);
             Dictionary<string, string> best = new Dictionary<string, string>();
@@ -64,9 +63,6 @@ namespace ProiectD2
                 keyList.Add(keys);
             }
 
-
-
-
             do
             {
                 currentPoint = keyList[rand.Next(keyList.Count)];
@@ -114,7 +110,6 @@ namespace ProiectD2
                                 {
                                     ipc.Add(ipcPointStanga);
                                 }
-
                             }
                             else
                             {
@@ -123,10 +118,10 @@ namespace ProiectD2
                                 {
                                     ipc.Add(ipcPointDreapta);
                                 }
-
                             }
                         }
                         break;
+
                     case "rename":
 
                         int ValueVc_rename = Convert.ToInt32(Vc[currentPoint]);
@@ -179,6 +174,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "reorder":
 
                         int ValueVc_reorder = Convert.ToInt32(Vc[currentPoint]);
@@ -231,6 +227,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "rsb_architecture":
                         string ValueVc_rsb_architecture = Vc[currentPoint];
 
@@ -246,7 +243,6 @@ namespace ProiectD2
                                 Vc[currentPoint] = veciniString[0];
                                 ipc.Add(ipcPointDreapta);
                             }
-
                         }
                         else
                         {
@@ -274,6 +270,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "separate_dispatch":
                         bool ValueVc_separate_dispatch = Convert.ToBoolean(Vc[currentPoint]);
 
@@ -295,8 +292,8 @@ namespace ProiectD2
                             ipc.Add(ipcBase);
                         }
 
-
                         break;
+
                     case "integer":
                         int ValueVc_integer = Convert.ToInt32(Vc[currentPoint]);
                         vecini = help.Neighbors(intervalExecution, ValueVc_integer);
@@ -337,6 +334,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "floating":
                         int ValueVc_floating = Convert.ToInt32(Vc[currentPoint]);
                         vecini = help.Neighbors(intervalExecution, ValueVc_floating);
@@ -377,6 +375,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "branch":
                         int ValueVc_branch = Convert.ToInt32(Vc[currentPoint]);
                         vecini = help.Neighbors(intervalExecution, ValueVc_branch);
@@ -417,6 +416,7 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     case "memory":
                         int ValueVc_memory = Convert.ToInt32(Vc[currentPoint]);
                         vecini = help.Neighbors(intervalExecution, ValueVc_memory);
@@ -457,16 +457,15 @@ namespace ProiectD2
                             }
                         }
                         break;
+
                     default:
                         break;
                 }
                 iteratii += 1;
-
             } while (iteratii != MAX);
 
             return Vc;
         }
-
 
         public List<double> GetIPC()
         {

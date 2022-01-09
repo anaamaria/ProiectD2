@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.textBoxMAX = new System.Windows.Forms.TextBox();
             this.HillClimbingChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
@@ -101,19 +101,19 @@
             // 
             // HillClimbingChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.HillClimbingChart.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.HillClimbingChart.Legends.Add(legend1);
+            chartArea4.Name = "ChartArea1";
+            this.HillClimbingChart.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.HillClimbingChart.Legends.Add(legend4);
             this.HillClimbingChart.Location = new System.Drawing.Point(719, 71);
             this.HillClimbingChart.Name = "HillClimbingChart";
             this.HillClimbingChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series1.Legend = "Legend1";
-            series1.Name = "ipc";
-            series1.YValuesPerPoint = 2;
-            this.HillClimbingChart.Series.Add(series1);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series4.Legend = "Legend1";
+            series4.Name = "ipc";
+            series4.YValuesPerPoint = 2;
+            this.HillClimbingChart.Series.Add(series4);
             this.HillClimbingChart.Size = new System.Drawing.Size(556, 140);
             this.HillClimbingChart.TabIndex = 2;
             this.HillClimbingChart.Text = "ipcHill";
@@ -275,7 +275,7 @@
             // 
             // numericUpDownInteger
             // 
-            this.numericUpDownInteger.Location = new System.Drawing.Point(578, 39);
+            this.numericUpDownInteger.Location = new System.Drawing.Point(567, 38);
             this.numericUpDownInteger.Maximum = new decimal(new int[] {
             8,
             0,
@@ -299,7 +299,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(462, 38);
+            this.label8.Location = new System.Drawing.Point(451, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(93, 17);
             this.label8.TabIndex = 18;
@@ -307,7 +307,7 @@
             // 
             // numericUpDownFloating
             // 
-            this.numericUpDownFloating.Location = new System.Drawing.Point(578, 77);
+            this.numericUpDownFloating.Location = new System.Drawing.Point(567, 76);
             this.numericUpDownFloating.Maximum = new decimal(new int[] {
             8,
             0,
@@ -331,7 +331,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(462, 77);
+            this.label9.Location = new System.Drawing.Point(451, 76);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(95, 17);
             this.label9.TabIndex = 20;
@@ -339,7 +339,7 @@
             // 
             // numericUpDownBranch
             // 
-            this.numericUpDownBranch.Location = new System.Drawing.Point(578, 113);
+            this.numericUpDownBranch.Location = new System.Drawing.Point(567, 112);
             this.numericUpDownBranch.Maximum = new decimal(new int[] {
             8,
             0,
@@ -363,7 +363,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(462, 113);
+            this.label10.Location = new System.Drawing.Point(451, 112);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(93, 17);
             this.label10.TabIndex = 22;
@@ -371,7 +371,7 @@
             // 
             // numericUpDownMemory
             // 
-            this.numericUpDownMemory.Location = new System.Drawing.Point(578, 152);
+            this.numericUpDownMemory.Location = new System.Drawing.Point(567, 151);
             this.numericUpDownMemory.Maximum = new decimal(new int[] {
             8,
             0,
@@ -395,7 +395,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(462, 152);
+            this.label11.Location = new System.Drawing.Point(451, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 17);
             this.label11.TabIndex = 24;
@@ -405,7 +405,7 @@
             // 
             this.labelHCi.AutoSize = true;
             this.labelHCi.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHCi.Location = new System.Drawing.Point(716, 32);
+            this.labelHCi.Location = new System.Drawing.Point(716, 41);
             this.labelHCi.Name = "labelHCi";
             this.labelHCi.Size = new System.Drawing.Size(178, 16);
             this.labelHCi.TabIndex = 26;
@@ -414,19 +414,19 @@
             // 
             // HillClimbingSohasticChart
             // 
-            chartArea2.Name = "ChartArea1";
-            this.HillClimbingSohasticChart.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.HillClimbingSohasticChart.Legends.Add(legend2);
+            chartArea5.Name = "ChartArea1";
+            this.HillClimbingSohasticChart.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.HillClimbingSohasticChart.Legends.Add(legend5);
             this.HillClimbingSohasticChart.Location = new System.Drawing.Point(719, 320);
             this.HillClimbingSohasticChart.Name = "HillClimbingSohasticChart";
             this.HillClimbingSohasticChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Fire;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series2.Legend = "Legend1";
-            series2.Name = "ipc";
-            series2.YValuesPerPoint = 2;
-            this.HillClimbingSohasticChart.Series.Add(series2);
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series5.Legend = "Legend1";
+            series5.Name = "ipc";
+            series5.YValuesPerPoint = 2;
+            this.HillClimbingSohasticChart.Series.Add(series5);
             this.HillClimbingSohasticChart.Size = new System.Drawing.Size(556, 158);
             this.HillClimbingSohasticChart.TabIndex = 27;
             this.HillClimbingSohasticChart.Text = "ipcHill";
@@ -434,19 +434,19 @@
             // 
             // SimulatedAnnealingChart
             // 
-            chartArea3.Name = "ChartArea1";
-            this.SimulatedAnnealingChart.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.SimulatedAnnealingChart.Legends.Add(legend3);
+            chartArea6.Name = "ChartArea1";
+            this.SimulatedAnnealingChart.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.SimulatedAnnealingChart.Legends.Add(legend6);
             this.SimulatedAnnealingChart.Location = new System.Drawing.Point(719, 572);
             this.SimulatedAnnealingChart.Name = "SimulatedAnnealingChart";
             this.SimulatedAnnealingChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
-            series3.Legend = "Legend1";
-            series3.Name = "ipc";
-            series3.YValuesPerPoint = 2;
-            this.SimulatedAnnealingChart.Series.Add(series3);
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bubble;
+            series6.Legend = "Legend1";
+            series6.Name = "ipc";
+            series6.YValuesPerPoint = 2;
+            this.SimulatedAnnealingChart.Series.Add(series6);
             this.SimulatedAnnealingChart.Size = new System.Drawing.Size(556, 185);
             this.SimulatedAnnealingChart.TabIndex = 28;
             this.SimulatedAnnealingChart.Text = "ipcHill";
@@ -457,7 +457,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(12, 60);
+            this.label13.Location = new System.Drawing.Point(7, 60);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(169, 16);
             this.label13.TabIndex = 29;
