@@ -2,7 +2,7 @@
 
 #### Documente florea:
 * http://webspace.ulbsibiu.ro/adrian.florea/html/Planificari/EvolutionaryComputing/Planif_EvolutionaryComputing_ACS_2.pdf
-
+* PPT-urie din repository
 
 #### Pentru rulare:
 * Rebuild solutie 
@@ -12,3 +12,7 @@
 
 * Install PSATSimInstall.exe
 * Run the app
+
+#### Program interface:
+
+![image](https://user-images.githubusercontent.com/67948869/148683096-8255ded1-e53d-4a7e-8093-4e7ddf8d1038.png)
