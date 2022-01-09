@@ -9,7 +9,8 @@ namespace ProiectD2
 {
     public class HelpingMethods
     {
-        int j;
+        private int j;
+
         public Dictionary<string, string> ReadDefaultConfig()
         {
             Dictionary<string, string> Configuration = new Dictionary<string, string>();
@@ -21,8 +22,6 @@ namespace ProiectD2
 
             firstNode = root.SelectSingleNode("//psatsim/config/general");
             var AtributeGeneral = firstNode.Attributes;
-
-
 
             Configuration.Add("superscalar", Convert.ToString(AtributeGeneral[0].Value));
             Configuration.Add("rename", Convert.ToString(AtributeGeneral[1].Value));
@@ -85,6 +84,7 @@ namespace ProiectD2
 
             doc.Save(Path);
         }
+
         public void UpdateXML(string currentKEY, Dictionary<string, string> Configuration)
         {
             XmlDocument doc = new XmlDocument();
@@ -105,27 +105,35 @@ namespace ProiectD2
                 case "superscalar":
                     AtributeGeneral[0].Value = Configuration["superscalar"];
                     break;
+
                 case "rename":
                     AtributeGeneral[1].Value = Configuration["rename"];
                     break;
+
                 case "reorder":
                     AtributeGeneral[2].Value = Configuration["reorder"];
                     break;
+
                 case "rsb_architecture":
                     AtributeGeneral[3].Value = Configuration["rsb_architecture"];
                     break;
+
                 case "separate_dispatch":
                     AtributeGeneral[7].Value = Configuration["separate_dispatch"];
                     break;
+
                 case "integer":
                     AtributeExecution[1].Value = Configuration["integer"];
                     break;
+
                 case "floating":
                     AtributeExecution[2].Value = Configuration["floating"];
                     break;
+
                 case "branch":
                     AtributeExecution[3].Value = Configuration["branch"];
                     break;
+
                 case "memory":
                     AtributeExecution[4].Value = Configuration["memory"];
                     break;
@@ -157,7 +165,6 @@ namespace ProiectD2
             process.WaitForExit();
         }
 
-
         public int[] General_Interval(int maxInterval)
         {
             int[] output = new int[maxInterval];
@@ -168,10 +175,7 @@ namespace ProiectD2
             }
 
             return output;
-
         }
-
-
 
         public int[] Generate_Interval(int maxInterval)
         {
@@ -210,7 +214,6 @@ namespace ProiectD2
             }
 
             return vecini;
-
         }
 
         public List<string> NeighborsString(string[] interval, string stringCautat)
@@ -240,15 +243,12 @@ namespace ProiectD2
 
         public double eval(string currentKey, Dictionary<string, string> Configuratie)
         {
-
             UpdateXML(currentKey, Configuratie);
 
             RunPSATSim();
 
             return ReadOutput();
         }
-
-
 
         public void ShowBestConfiguration(ListBox listBox, Dictionary<string, string> Configuration)
         {
@@ -257,7 +257,6 @@ namespace ProiectD2
             {
                 listBox.Items.Add(keys + ": " + Configuration[keys]);
             }
-
         }
 
         public void DrawChart(List<double> data, System.Windows.Forms.DataVisualization.Charting.Chart chart)
@@ -285,10 +284,8 @@ namespace ProiectD2
             return probability;
         }
 
-
         public double AnnealingProbability(double evalVc, double evalVn, double T)
         {
-
             double probability;
             double calc = (evalVn - evalVc) / T;
             probability = Math.Pow(Math.E, calc);

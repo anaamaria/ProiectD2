@@ -121,5 +121,50 @@ namespace ProiectD2
         {
 
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTmin_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SimulatedAnnealingChart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelSA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxTmax_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HillClimbingChart_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
